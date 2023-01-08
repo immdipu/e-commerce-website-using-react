@@ -16,6 +16,8 @@ import Sort from "./Sort";
 import Filters from "./Filters";
 import ProductList from "./ProductList";
 import Product from "./Product";
+import CartContent from "./CartContent";
+import CartColumn from "./CartColumn";
 
 export {
   Footer,
@@ -36,4 +38,6 @@ export {
   Filters,
   ProductList,
   Product,
+  CartContent,
+  CartColumn,
 };

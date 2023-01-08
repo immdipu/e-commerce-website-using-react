@@ -5,7 +5,7 @@ const Stars = ({ stars, reviews }) => {
   const tempStars = Array.from({ length: 5 }, (_, index) => {
     const number = index + 0.5;
     return (
-      <span className="inline-block mr-1 text-yellow-500">
+      <span key={index} className="inline-block mr-1 text-yellow-500">
         {stars >= index + 1 ? (
           <BsStarFill />
         ) : stars >= number ? (
