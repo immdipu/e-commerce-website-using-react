@@ -1,4 +1,3 @@
-import React from "react";
 import {
   LOAD_PRODUCTS,
   SET_GRIDVIEW,
@@ -78,7 +77,7 @@ const filter_reducer = (state, action) => {
     // category
     if (category !== "all") {
       tempProducts = tempProducts.filter(
-        (product) => product.category == category
+        (product) => product.category === category
       );
     }
 
@@ -86,14 +85,14 @@ const filter_reducer = (state, action) => {
 
     if (company !== "all") {
       tempProducts = tempProducts.filter(
-        (product) => product.company == company
+        (product) => product.company === company
       );
     }
 
     //colors
     if (color !== "all") {
       tempProducts = tempProducts.filter((product) => {
-        return product.colors.find((c) => c == color);
+        return product.colors.find((c) => c === color);
       });
     }
 

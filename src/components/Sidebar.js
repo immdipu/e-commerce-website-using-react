@@ -5,7 +5,6 @@ import { useProductContext } from "../context/products_context";
 import { FaTimes } from "react-icons/fa";
 import { links } from "../utils/constants";
 import CartButtons from "./CartButtons";
-import { useUserContext } from "../context/user_context";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSiderbar } = useProductContext();
@@ -38,11 +37,6 @@ const Sidebar = () => {
               </li>
             );
           })}
-          <li>
-            <Link to="/checkout" onClick={closeSiderbar}>
-              Checkout
-            </Link>
-          </li>
         </ul>
         <div className="flex mt-16 justify-center">
           <CartButtons />

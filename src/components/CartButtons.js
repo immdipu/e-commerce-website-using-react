@@ -7,6 +7,8 @@ import { useUserContext } from "../context/user_context";
 
 const CartButtons = () => {
   const { closeSiderbar } = useProductContext();
+  const { total_items } = useCartContext();
+  const { loginWithRedirect, myUser, logout } = useUserContext();
   return (
     <div className="flex items-center gap-10">
       <Link
@@ -18,16 +20,27 @@ const CartButtons = () => {
         <span className="relative">
           <FaShoppingCart />
           <span className="absolute -top-4 -right-6 bg-orange-200 text-lg scale-75 font-normal px-2 rounded-full">
-            12
+            {total_items}
           </span>
         </span>
       </Link>
-      <button
-        type="button"
-        className="flex gap-2 items-center font-semibold text-xl"
-      >
-        Login <FaUserPlus />
-      </button>
+      {myUser ? (
+        <button
+          type="button"
+          className="flex gap-2 items-center font-semibold text-xl"
+          onClick={() => logout({ returnTo: window.location.origin })}
+        >
+          Logout <FaUserMinus />
+        </button>
+      ) : (
+        <button
+          type="button"
+          className="flex gap-2 items-center font-semibold text-xl"
+          onClick={loginWithRedirect}
+        >
+          Login <FaUserPlus />
+        </button>
+      )}
     </div>
   );
 };

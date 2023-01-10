@@ -8,6 +8,7 @@ import { useProductContext } from "../context/products_context";
 
 const Navbar = () => {
   const { openSiderbar } = useProductContext();
+
   return (
     <nav className="mt-2">
       <div className="grid grid-cols-[auto_1fr_auto] mx-8 max-md:grid-cols-[1fr]">
@@ -21,7 +22,7 @@ const Navbar = () => {
         </div>
         <ul className="flex items-center justify-center gap-8 font-semibold capitalize max-md:hidden">
           {links.map((link, index) => {
-            const { id, text, url } = link;
+            const { text, url } = link;
             return (
               <li key={index}>
                 <NavLink to={url}>{text}</NavLink>
@@ -29,6 +30,7 @@ const Navbar = () => {
             );
           })}
         </ul>
+
         <div className="flex items-center max-md:hidden">
           <CartButtons />
         </div>

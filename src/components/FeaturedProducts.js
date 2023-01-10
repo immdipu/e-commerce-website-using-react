@@ -1,6 +1,5 @@
 import React from "react";
 import { useProductContext } from "../context/products_context";
-import { Link } from "react-router-dom";
 import Loading from "./Loading";
 import Product from "./Product";
 import Error from "./Error";

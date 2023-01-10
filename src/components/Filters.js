@@ -76,7 +76,7 @@ const Filters = () => {
             <h2>Colors</h2>
             <div>
               {colors.map((c, index) => {
-                if (c == "all") {
+                if (c === "all") {
                   return (
                     <button
                       key={index}

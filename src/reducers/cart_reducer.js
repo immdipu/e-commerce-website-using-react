@@ -1,4 +1,3 @@
-import { act } from "react-dom/test-utils";
 import {
   ADD_TO_CART,
   REMOVE_CART_ITEM,
@@ -63,14 +62,13 @@ const cart_reducer = (state, action) => {
           }
           return { ...item, amount: newAmount };
         }
-      } else {
-        return item;
       }
+      return item;
     });
     return { ...state, cart: tempCart };
   }
 
-  if (action.type == COUNT_CART_TOTALS) {
+  if (action.type === COUNT_CART_TOTALS) {
     const { total_items, total_amount } = state.cart.reduce(
       (total, cartItem) => {
         const { amount, price } = cartItem;
@@ -83,7 +81,7 @@ const cart_reducer = (state, action) => {
         total_amount: 0,
       }
     );
-    return { ...state, total_amount, total_amount };
+    return { ...state, total_items, total_amount };
   }
 };
 
