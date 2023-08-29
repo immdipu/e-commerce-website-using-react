@@ -13,8 +13,8 @@ const Navbar = () => {
     <nav className="mt-2">
       <div className="grid grid-cols-[auto_1fr_auto] mx-8 max-md:grid-cols-[1fr]">
         <div className="flex justify-between">
-          <Link to="/">
-            <img src={logo} alt="comfy sloth" className="w-44" />
+          <Link to="/" className="font-bold text-xl text-neutral-700">
+            Comfy Furniture
           </Link>
           <button type="button" className="md:hidden" onClick={openSiderbar}>
             <FaBars />

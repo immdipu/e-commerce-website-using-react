@@ -12,11 +12,11 @@ const Hero = () => {
           Comfort Zone
         </h1>
         <p className="leading-8 text-inherit font-normal max-sm:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-          nostrum maiores omnis aperiam voluptatibus deleniti aliquam. Nobis
-          magni delectus reiciendis placeat iusto cupiditate hic ratione illo
-          Magni obcaecati delectus explicabo dolorum maiores est magnam aliquam
-          atque et eos!
+          Discover the perfect blend of comfort and style at Comfy Furniture.
+          Our online store offers a wide array of furniture pieces designed to
+          transform your living spaces into cozy havens. From plush sofas to
+          elegant tables and everything in between, we have the furnishings that
+          match your vision.
         </p>
         <button className="bg-neutral-600 text-white font-medium px-3 rounded-md text-xl py-2 w-fit max-sm:text-sm">
           <Link to="/products">SHOP NOW</Link>
